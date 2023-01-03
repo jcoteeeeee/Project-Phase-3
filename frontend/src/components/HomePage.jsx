@@ -1,11 +1,13 @@
 import Header from './Header'
 import AptBtn from './AptBtn'
+import PhotoDisplay from './PhotoDisplay'
 
-const HomePage = () => {
+const HomePage = (photos) => {
     return(
         <div>
             <Header/>   
             <AptBtn/> 
+            <PhotoDisplay/>
         </div>
     )
 }

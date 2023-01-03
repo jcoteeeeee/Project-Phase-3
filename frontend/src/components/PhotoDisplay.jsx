@@ -5,3 +5,5 @@ const PhotoDisplay = () => {
         </div>
     )
 }
+
+export default PhotoDisplay

@@ -1,0 +1,33 @@
+{
+    "photos": [
+        {
+            "id": 0,
+            "source": "./photos/tattoo-one.png"
+        }, 
+
+        {
+            "id": 1,
+            "source": "./photos/tattoo-two.jpeg"
+        },
+
+        {
+            "id": 2,
+            "source": "./photos/tattoo-three.webp"
+        },
+
+        {
+            "id": 3,
+            "source": ".photos/tattoo-four.jpg"
+        },
+
+        {
+            "id": 4,
+            "source": "./photos/tattoo-five.wepb"
+        },
+
+        {
+            "id": 5,
+            "source": "./photos/tattoo-six.jpg"
+        }
+    ]
+}
