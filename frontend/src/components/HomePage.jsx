@@ -1,9 +1,11 @@
 import Header from './Header'
+import AptBtn from './AptBtn'
 
 const HomePage = () => {
     return(
         <div>
-            <Header/>    
+            <Header/>   
+            <AptBtn/> 
         </div>
     )
 }
