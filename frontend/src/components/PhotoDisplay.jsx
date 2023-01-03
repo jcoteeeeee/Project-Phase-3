@@ -1,7 +1,13 @@
-const PhotoDisplay = () => {
+const PhotoDisplay = ( {photos} ) => {
     return(
         <div>
-            
+            {
+                photos.map((photo) => {
+                    return(
+                        <img src={photo.source}/>
+                    )
+                })
+            }
         </div>
     )
 }
