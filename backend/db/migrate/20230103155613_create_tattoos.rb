@@ -4,8 +4,6 @@ class CreateTattoos < ActiveRecord::Migration[6.1]
       t.integer :size
       t.boolean :claimed
       t.string :image_url
-      t.integer :artist_id
-      t.integer :client_id
       t.timestamps
     end
   end
