@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import Header from './Header'
 import AptBtn from './AptBtn'
 import PhotoDisplay from './PhotoDisplay'
+import AptCalendar from './AptCalendar'
 
 const HomePage = ( {photos, setPhotos} ) => {
     useEffect(() => {
@@ -18,6 +19,7 @@ const HomePage = ( {photos, setPhotos} ) => {
             <Header/>   
             <AptBtn/> 
             <PhotoDisplay photos={photos}/>
+            <AptCalendar/>
         </div>
     )
 }
