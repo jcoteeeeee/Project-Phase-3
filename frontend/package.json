@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "react": "^18.2.0",
+<<<<<<< HEAD
+    "react-datetime-picker": "^4.1.1",
+=======
     "react-calendar": "^4.0.0",
+>>>>>>> 83e7b121ccfb35119fddfa938b14d567915225dc
     "react-dom": "^18.2.0",
     "server": "^1.0.38"
   },
