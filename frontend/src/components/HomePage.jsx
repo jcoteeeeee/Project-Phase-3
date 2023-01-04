@@ -6,7 +6,7 @@ import PhotoDisplay from './PhotoDisplay'
 const HomePage = ( {photos, setPhotos} ) => {
     useEffect(() => {
         const request = async () => {
-            let req = await fetch("http//localhost:3000")
+            let req = await fetch("http://localhost:3000/photos")
             let res = await req.json()
             setPhotos(res)
         }
