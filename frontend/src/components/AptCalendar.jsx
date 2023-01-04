@@ -1,9 +1,9 @@
-import DateTimePicker from 'react-datetime-picker'
+import DayTimePicker from '@mooncake-dev/react-day-time-picker'
 
 const AptCalendar = () => {
     return(
         <div>
-            <DateTimePicker/>
+            <DayTimePicker/>
         </div>
     )
 
