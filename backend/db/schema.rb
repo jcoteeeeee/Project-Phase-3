@@ -16,8 +16,7 @@ ActiveRecord::Schema.define(version: 2023_01_04_152108) do
     t.integer "client_id"
     t.integer "tattoo_id"
     t.integer "artist_id"
-    t.date "apt_date"
-    t.time "apt_time"
+    t.datetime "apt_datetime"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -39,7 +38,7 @@ ActiveRecord::Schema.define(version: 2023_01_04_152108) do
   end
 
   create_table "tattoos", force: :cascade do |t|
-    t.integer "size"
+    t.string "size"
     t.string "location"
     t.boolean "first_tattoo"
     t.boolean "color"
