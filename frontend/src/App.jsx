@@ -1,22 +1,36 @@
 import { useState } from 'react'
-import HomePage from './components/HomePage'
-import { Route, Routes } from "react-router-dom"
-import 'bootstrap/dist/css/bootstrap.min.css'
-import ArtistHomePage from './components/ArtistHomepage'
-// import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import HomePage from './pages/HomePage'
+import StudioHomepage from './pages/StudioHomepage'
+import SchedulerPage from './pages/SchedulerPage'
+import BookingListPage from './pages/BookingListPage'
+import StaffPage from './pages/StaffPage'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 
-function App() {
+export default function App() {
   const [photos, setPhotos] = useState([])
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/HomePage" element={<HomePage photos={photos} setPhotos={setPhotos}/>} />
-        <Route path="/artisthomepage" element={<ArtistHomePage />} />
-      </Routes>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+            <Route path="studiohomepage" element={<StudioHomepage />} />
+            <Route path="studiohomepage/schedulerpage" element={<SchedulerPage />} />
+            <Route path="studiohomepage/bookinglistpage" element={<BookingListPage />} />
+            <Route path="studiohomepage/staffpage" element={<StaffPage />} />
+        </Routes>
+      </BrowserRouter>
   )
 }
 
-export default App
+// <div>
+//   <HomePage/>
+
+  {/* <Routes> */}
+    {/* <Route path="/" element={<Home />} /> */}
+    {/* <Route path="/HomePage" element={<HomePage photos={photos} setPhotos={setPhotos}/>} /> */}
+    {/* <Route path="/artisthomepage" element={<ArtistHomePage />} /> */}
+  {/* </Routes> */}
+// </div>
+
