@@ -6,12 +6,12 @@ const BookingListPage = () => {
   const [apts, setApts] = useState([])
 
   useEffect(() => {
-    const request = async () => {
-      let req = await fetch("localhost//:3000")
+    const getApts = async () => {
+      let req = await fetch("http://localhost:3000/appointments")
       let res = await req.json()
       setApts(res)
     }
-    request()
+    getApts()
   }, [])
 
   return (
@@ -19,9 +19,9 @@ const BookingListPage = () => {
       <h3>This is a list of all the appts</h3>
       <div>
         {
-          res.map((apt) => {
+          apts.map((apt) => {
             return(
-              <div>apt.{apt_datetime}</div>
+              <div>Time: {apt.apt_datetime} Client: {apt.client_id} Artist:{apt.artist_id} </div>
             )
           })
         }
