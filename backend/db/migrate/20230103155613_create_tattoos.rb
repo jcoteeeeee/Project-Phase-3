@@ -2,8 +2,10 @@ class CreateTattoos < ActiveRecord::Migration[6.1]
   def change
     create_table :tattoos do |t|
       t.integer :size
-      t.boolean :claimed
-      t.string :image_url
+      t.string :location
+      t.boolean :first_tattoo
+      t.boolean :color
+
       t.timestamps
     end
   end
