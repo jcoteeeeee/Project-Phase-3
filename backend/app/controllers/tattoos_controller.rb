@@ -18,7 +18,8 @@ class TattoosController < ApplicationController
     end 
 
     def destroy 
-
+        tattoo = Tattoo.find_by!(id: params[:id])
+        tattoo.destroy 
     end 
     
 end

@@ -18,7 +18,8 @@ class ClientController < ApplicationController
     end 
 
     def destroy 
-
+        client = Client.find_by!(id: params[:id])
+        client.destroy
     end 
     
 end
