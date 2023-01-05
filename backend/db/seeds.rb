@@ -38,16 +38,16 @@ tattoo9 = Tattoo.create(size: "Medium", location: "Lower back", first_tattoo: tr
 tattoo10 = Tattoo.create(size: "Small", location: "Upper back", first_tattoo: false, color: true)
 
 puts "creating appointments"
-Appointment.create(client_id: client1.id, tattoo_id: tattoo2.id, artist_id: artist1.id, apt_date: 2022-01-9, apt_time: 053000)
-Appointment.create(client_id: client5.id, tattoo_id: tattoo1.id, artist_id: artist3.id, apt_date: 2022-01-9, apt_time: 020000)
-Appointment.create(client_id: client2.id, tattoo_id: tattoo5.id, artist_id: artist2.id, apt_date: 2022-01-10, apt_time: 110000)
-Appointment.create(client_id: client3.id, tattoo_id: tattoo4.id, artist_id: artist4.id, apt_date: 2022-01-10, apt_time: 123000)
-Appointment.create(client_id: client4.id, tattoo_id: tattoo3.id, artist_id: artist1.id, apt_date: 2022-01-11, apt_time: 050000)
-Appointment.create(client_id: client6.id, tattoo_id: tattoo10.id, artist_id: artist1.id, apt_date: 2022-01-11, apt_time: 100000)
-Appointment.create(client_id: client10.id, tattoo_id: tattoo9.id, artist_id: artist2.id, apt_date: 2022-01-11, apt_time: 030000)
-Appointment.create(client_id: client8.id, tattoo_id: tattoo6.id, artist_id: artist5.id, apt_date: 2022-01-12, apt_time: 043000)
-Appointment.create(client_id: client7.id, tattoo_id: tattoo8.id, artist_id: artist3.id, apt_date: 2022-01-12, apt_time: 070000)
-Appointment.create(client_id: client9.id, tattoo_id: tattoo7.id, artist_id: artist4.id, apt_date: 2022-01-12, apt_time: 063000)
+Appointment.create(client_id: client1.id, tattoo_id: tattoo2.id, artist_id: artist1.id, apt_datetime: '2023-01-09 05:30:00')
+Appointment.create(client_id: client5.id, tattoo_id: tattoo1.id, artist_id: artist3.id, apt_datetime: '2023-01-09 02:00:00')
+Appointment.create(client_id: client2.id, tattoo_id: tattoo5.id, artist_id: artist2.id, apt_datetime: '2023-01-10 11:00:00')
+Appointment.create(client_id: client3.id, tattoo_id: tattoo4.id, artist_id: artist4.id, apt_datetime: '2023-01-10 12:30:00')
+Appointment.create(client_id: client4.id, tattoo_id: tattoo3.id, artist_id: artist1.id, apt_datetime: '2023-01-11 05:00:00')
+Appointment.create(client_id: client6.id, tattoo_id: tattoo10.id, artist_id: artist1.id, apt_datetime: '2023-01-11 10:00:00')
+Appointment.create(client_id: client10.id, tattoo_id: tattoo9.id, artist_id: artist2.id, apt_datetime: '2023-01-11 03:00:00')
+Appointment.create(client_id: client8.id, tattoo_id: tattoo6.id, artist_id: artist5.id, apt_datetime: '2023-01-12 04:30:00')
+Appointment.create(client_id: client7.id, tattoo_id: tattoo8.id, artist_id: artist3.id, apt_datetime: '2023-01-12 07:00:00')
+Appointment.create(client_id: client9.id, tattoo_id: tattoo7.id, artist_id: artist4.id, apt_datetime: '2023-01-12 06:30:00')
 
 
 
