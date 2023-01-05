@@ -37,12 +37,12 @@ Appointment.create(client_id: Client.first.id, tattoo_id: Tattoo.second.id, arti
 Appointment.create(client_id: Client.fifth.id, tattoo_id: Tattoo.first.id, artist_id: Artist.third.id, apt_date: 2022-01-9, apt_time: 020000)
 Appointment.create(client_id: Client.second.id, tattoo_id: Tattoo.fifth.id, artist_id: Artist.second.id, apt_date: 2022-01-10, apt_time: 110000)
 Appointment.create(client_id: Client.third.id, tattoo_id: Tattoo.fourth.id, artist_id: Artist.fourth.id, apt_date: 2022-01-10, apt_time: 123000)
-Appointment.create(client_id: Client.fourth.id, tattoo_id: Tattoo.third.id, artist_id: Artist.first.id , apt_date: 2022-01-11, apt_time: 050000)
-Appointment.create(client_id: Client.sixth.id, tattoo_id: Tattoo.last.id, artist_id: Artist.first.id , apt_date: 2022-01-11, apt_time: 100000)
-Appointment.create(client_id: Client.last.id, tattoo_id: Tattoo.ninth.id, artist_id: Artist.second.id , apt_date: 2022-01-11, apt_time: 030000)
-Appointment.create(client_id: Client.eight.id, tattoo_id: Tattoo.seventh.id, artist_id: Artist.last.id , apt_date: 2022-01-12, apt_time: 043000)
-Appointment.create(client_id: Client.seventh.id, tattoo_id: Tattoo.eigth.id, artist_id: Artist.third.id , apt_date: 2022-01-12, apt_time: 070000)
-Appointment.create(client_id: Client.ninth.id, tattoo_id: Tattoo.sixth.id, artist_id: Artist.fourth.id , apt_date: 2022-01-12, apt_time: 063000)
+Appointment.create(client_id: Client.fourth.id, tattoo_id: Tattoo.third.id, artist_id: Artist.first.id, apt_date: 2022-01-11, apt_time: 050000)
+Appointment.create(client_id: Client.sixth.id, tattoo_id: Tattoo.last.id, artist_id: Artist.first.id, apt_date: 2022-01-11, apt_time: 100000)
+Appointment.create(client_id: Client.last.id, tattoo_id: Tattoo.ninth.id, artist_id: Artist.second.id, apt_date: 2022-01-11, apt_time: 030000)
+Appointment.create(client_id: Client.eight.id, tattoo_id: Tattoo.seventh.id, artist_id: Artist.last.id, apt_date: 2022-01-12, apt_time: 043000)
+Appointment.create(client_id: Client.seventh.id, tattoo_id: Tattoo.eigth.id, artist_id: Artist.third.id, apt_date: 2022-01-12, apt_time: 070000)
+Appointment.create(client_id: Client.ninth.id, tattoo_id: Tattoo.sixth.id, artist_id: Artist.fourth.id, apt_date: 2022-01-12, apt_time: 063000)
 
 
 

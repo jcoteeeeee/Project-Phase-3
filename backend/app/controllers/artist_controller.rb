@@ -18,7 +18,8 @@ class ArtistController < ApplicationController
     end 
 
     def destroy 
-
+        artist = Artist.find_by!(id: params[:id])
+        artist.destroy
     end
 
 end
