@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import Header from './Header'
 import AptBtn from './AptBtn'
 // import PhotoDisplay from './PhotoDisplay'
-import AptCalendar from './AptCalendar'
 import { Link } from "react-router-dom";
-import ArtistHomepage from './ArtistHomepage'
+import ArtistHomepage from './ArtistHomepage';
+import toast, { Toaster } from 'react-hot-toast';
 // import './src/App.css'
 
 
@@ -28,12 +28,11 @@ function Box({ children, ...props }) {
   return <div {...props}>{children}</div>
 }
 
+const notify = () => toast('All Full');
+
     return(
         <div>
             <Header/>
-            <AptBtn/> 
-            {/* <PhotoDisplay photos={photos}/> */}
-            {/* <AptCalendar/> */}
             <Box
             style={{
                 backgroundColor: '#4287f5',
@@ -43,7 +42,24 @@ function Box({ children, ...props }) {
                 padding: 12,
                 width: 300,
                 }}>
-                <Link style= {{fontColor: '#fff'}} to="artisthomepage">I'm an artist!</Link>
+                <form>
+                    <div className="input-group">
+                        <label htmlFor="name">Studio Name</label>
+                            <input type="text" id="name" />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="email">Password</label>
+                         <input type="email" id="email" />
+                    </div>
+                    <button type="submit" className="submit-btn">
+                    <Link style= {{fontColor: '#fff'}} to="artisthomepage">Submit</Link>
+                    </button>
+                 </form>
+                <div>
+                    <button onClick={notify}>Create New Account</button>
+                    <Toaster />
+                </div>
+                
             </Box>
         </div>
     )

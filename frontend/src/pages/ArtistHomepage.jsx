@@ -25,6 +25,7 @@ return <div {...props}>{children}</div>
           </div>
           <div className='viewAllApptsBox'>
             <h3>List of Appointments</h3>
+            <h3>Staff</h3>
           </div>
         </div>
     )
