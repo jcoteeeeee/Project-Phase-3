@@ -8,10 +8,10 @@ const Header = () => {
         </div>
 
         <div id="navbar">
-            <h3>About Us</h3>
+            {/* <h3>About Us</h3>
             <h3>Gallery</h3>
             <h3>Artists</h3>
-            <h3>Contact</h3>
+            <h3>Contact</h3> */}
         </div>
       </div>  
     )

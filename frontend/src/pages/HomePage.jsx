@@ -24,15 +24,27 @@ const HomePage = ( {photos, setPhotos} ) => {
 
     // navigate('/artisthomepage')
 // }
+function Box({ children, ...props }) {
+  return <div {...props}>{children}</div>
+}
 
     return(
         <div>
             <Header/>
-            <Link to="artisthomepage">Artist Home Page</Link>
-            {/* <button className='goToArtistHomePageBtn' onClick={() => { goToArtistHomePage('/artisthomepage') }}> I'm an artist </button> */}
             <AptBtn/> 
             {/* <PhotoDisplay photos={photos}/> */}
-            <AptCalendar/>
+            {/* <AptCalendar/> */}
+            <Box
+            style={{
+                backgroundColor: '#4287f5',
+                borderRadius: 4,
+                color: '#eee',
+                minHeight: 200,
+                padding: 12,
+                width: 300,
+                }}>
+                <Link style= {{fontColor: '#fff'}} to="artisthomepage">I'm an artist!</Link>
+            </Box>
         </div>
     )
 }

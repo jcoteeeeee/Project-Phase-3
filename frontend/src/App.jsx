@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from './pages/HomePage'
 import ArtistHomepage from './pages/ArtistHomepage'
+import SchedulerPage from './pages/SchedulerPage'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
@@ -13,6 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />}/>
             <Route path="artisthomepage" element={<ArtistHomepage />} />
+            <Route path="artisthomepage/schedulerpage" element={<SchedulerPage />} />
         </Routes>
       </BrowserRouter>
   )
