@@ -2,7 +2,7 @@ import { React, useState, } from "react";
 // import AptCalendar from './AptCalendar';
 import { Link } from "react-router-dom";
 
-const ArtistHomePage = () => {
+const StudioHomePage = () => {
 
 function Box({ children, ...props }) {
 return <div {...props}>{children}</div>
@@ -19,16 +19,14 @@ return <div {...props}>{children}</div>
                 padding: 12,
                 width: 300,
                 }}>
-                <Link to="schedulerpage">Schedule New</Link>
+                <Link to="schedulerpage">Schedule New</Link><br/>
+                <Link to="staffpage">View All Artists</Link><br/>
+                <Link to="bookinglistpage">View Your Appts</Link>
             </Box>
-             
           </div>
-          <div className='viewAllApptsBox'>
-            <h3>List of Appointments</h3>
-            <h3>Staff</h3>
-          </div>
+          
         </div>
     )
 }
 
-export default ArtistHomePage;
+export default StudioHomePage;
