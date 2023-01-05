@@ -10,13 +10,13 @@ class TattoosController < ApplicationController
     end 
 
     def create 
-        tattoo = Tattoo.create(size: , location: , first_name: , color: )
+        tattoo = Tattoo.create(size: params[:size], location: params[:location], first_tattoo: params[:first_tattoo], color: params[:color])
         render json: tattoo
     end 
 
     def update 
         tattoo = Tattoo.find_by!(id: params[:id])
-        tattoo.update!(size: , location: , first_name: , color: )
+        tattoo.update!(size: params[:size], location: params[:location], first_tattoo: params[:first_tattoo], color: params[:color])
         render json: update
     end 
 

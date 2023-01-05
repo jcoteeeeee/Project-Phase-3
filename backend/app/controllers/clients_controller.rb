@@ -1,4 +1,4 @@
-class ClientController < ApplicationController
+class ClientsController < ApplicationController
     def index 
         clients = Client.all 
         render json: clients 
@@ -10,13 +10,13 @@ class ClientController < ApplicationController
     end
 
     def create 
-        client = Client.create(first_name: , last_name: , email: )
+        client = Client.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
         render client
     end 
 
     def update 
         client = Client.update!(id: params[:id])
-        client.update(first_name: , last_name: , email: )
+        client.update(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
         render json: client
     end 
 
