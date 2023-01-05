@@ -4,6 +4,8 @@ import AptBtn from './AptBtn'
 import PhotoDisplay from './PhotoDisplay'
 import AptCalendar from './AptCalendar'
 
+
+
 const HomePage = ( {photos, setPhotos} ) => {
     useEffect(() => {
         const request = async () => {

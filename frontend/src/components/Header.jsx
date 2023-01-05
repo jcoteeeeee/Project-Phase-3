@@ -1,8 +1,10 @@
+
+
 const Header = () => {
     return(
       <div id="header">
         <div id="title">
-            <h1>Tattoo Parlor</h1>
+            <h1 >Tattoo Parlor</h1>
         </div>
 
         <div id="navbar">
