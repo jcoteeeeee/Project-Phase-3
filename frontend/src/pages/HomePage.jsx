@@ -3,7 +3,7 @@ import Header from './Header'
 import AptBtn from './AptBtn'
 // import PhotoDisplay from './PhotoDisplay'
 import { Link } from "react-router-dom";
-import ArtistHomepage from './ArtistHomepage';
+import StudioHomepage from './StudioHomepage';
 import toast, { Toaster } from 'react-hot-toast';
 // import './src/App.css'
 
@@ -52,7 +52,7 @@ const notify = () => toast('All Full');
                          <input type="email" id="email" />
                     </div>
                     <button type="submit" className="submit-btn">
-                    <Link style= {{fontColor: '#fff'}} to="artisthomepage">Submit</Link>
+                    <Link style= {{fontColor: '#fff'}} to="studiohomepage">Submit</Link>
                     </button>
                  </form>
                 <div>
