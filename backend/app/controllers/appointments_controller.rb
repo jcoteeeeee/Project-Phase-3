@@ -10,16 +10,19 @@ class AppointmentsController < ApplicationController
     end 
 
     def create 
-
+        appointment = Appointment.create(client_id: , artist_id: , tattoo_id: , apt_time: , apt_date: )
+        render json: appointment
     end
 
     def update 
-
+        appointment = Appointment.find_by!(id: params[:id])
+        appointment.update!(client_id: , artist_id: , tattoo_id: , apt_time: , apt_date: )
+        render json: appointment
     end 
 
     def destroy 
         appointment = Appointment.find_by!(id: params[:id])
-        appointment.destroy
+        appointment.destroy!
     end 
 
 end

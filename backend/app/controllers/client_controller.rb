@@ -10,11 +10,14 @@ class ClientController < ApplicationController
     end
 
     def create 
-
+        client = Client.create(first_name: , last_name: , email: )
+        render client
     end 
 
     def update 
-
+        client = Client.update!(id: params[:id])
+        client.update(first_name: , last_name: , email: )
+        render json: client
     end 
 
     def destroy 

@@ -10,11 +10,14 @@ class ArtistController < ApplicationController
     end 
 
     def create 
-
+        artist = Artist.create(first_name: , last_name: , email: )
+        render json: artist
     end
 
     def update 
-
+        artist = Artist.find_by!(id: params[:id])
+        artist.update(first_name: , last_name: , email: )
+        render json: artist 
     end 
 
     def destroy 
