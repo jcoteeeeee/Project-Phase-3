@@ -2,3 +2,25 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: normal;
 }
+.scheduleNewBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.viewAllApptsBox {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+}
+
+#title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+}
+
+#navbar {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 15px;
+}
+
