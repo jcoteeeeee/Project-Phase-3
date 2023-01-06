@@ -1,5 +1,5 @@
 class Tattoo < ApplicationRecord
     has_many :appointments
-    belongs_to :artists
-    belongs_to :clients
+    has_many :artists, through: :appointments
+    has_many :clients, through: :clients
 end
