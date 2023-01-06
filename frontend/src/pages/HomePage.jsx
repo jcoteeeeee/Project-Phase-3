@@ -45,11 +45,11 @@ return(
                 }}>
                 <form>
                     <div className="input-group">
-                        <label htmlFor="name">Studio Name </label>
+                        <label htmlFor="name">Studio Name </label> <br/>
                             <input type="text" id="name" />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="email">Password </label>
+                        <label htmlFor="email">Password </label> <br/>
                          <input type="email" id="email" />
                     </div>
                     <button type="submit" className="submit-btn">
