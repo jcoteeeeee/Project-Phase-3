@@ -33,15 +33,18 @@ const StaffPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('submitted')
-    let req = await fetch(`http://localhost:3000/artists/${artist.id}`, {
-      method: "PATCH",
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        firstname: e.target.firstname.value,
-        lastname: e.target.lastname.value,
-        email: e.target.email.value
+    const updateArtist = async (artist) => {
+      let req = await fetch(`http://localhost:3000/artists/${artist.id}`, {
+        method: "PATCH",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstname: e.target.firstname.value,
+          lastname: e.target.lastname.value,
+          email: e.target.email.value
+        })
       })
-    })
+    }
+    updateArtist()
   }
 
   return (

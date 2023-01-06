@@ -21,15 +21,18 @@ const BookingListPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let req = await fetch(`http://localhost:3000/appointments/${appointment.id}`, {
-      method: 'PATCH', 
-      headers: {'Content-Type': 'application-json'}, 
-      body: JSON.stringify({
-        aptdatetime: e.target.aptdatetime.value,
-        artist: e.target.artist.value,
-        client: e.target.client.value 
+    const updateApt = async (appointment) => {
+      let req = await fetch(`http://localhost:3000/appointments/${appointment.id}`, {
+        method: 'PATCH', 
+        headers: {'Content-Type': 'application-json'}, 
+        body: JSON.stringify({
+          aptdatetime: e.target.aptdatetime.value,
+          artist: e.target.artist.value,
+          client: e.target.client.value 
+        })
       })
-    })
+    }
+    updateApt()
   }
 
   return (
