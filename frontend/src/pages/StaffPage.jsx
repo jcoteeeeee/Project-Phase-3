@@ -46,8 +46,8 @@ const StaffPage = () => {
 
   return (
     <div>
-      <h2>This is a list of all the artists at this studio</h2>
-      <div>
+      <h2>OurStaff</h2>
+      <div className="stafflist">
         {
           artists.map((artist) => {
             return(
