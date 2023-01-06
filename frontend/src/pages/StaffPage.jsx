@@ -4,6 +4,7 @@ const StaffPage = () => {
 
   const [artists, setArtists] = useState([])
 
+  //get request 
   useEffect(() => {
     const getArtists = async () => {
       let req = await fetch("http://localhost:3000/artists")
@@ -12,13 +13,14 @@ const StaffPage = () => {
       setArtists(res)
     }
     getArtists()
-  }, [])
+  }, [artists])
 
-  const deleteArtist = async () => {
-    let req = await fetch("http://localhost:3000/artsit/:id", {
+  //delete request 
+  const deleteArtist = async (artist) => {
+    //let artistId = artist.id
+    let req = await fetch(`http://localhost:3000/artists/${artist.id}`, {
       method: 'DELETE'
     })
-    deleteArtist()
   }
 
   return (
@@ -34,7 +36,7 @@ const StaffPage = () => {
                   <li>Email: {artist.email}</li>
                   <button onClick={() => {}}>Update artist's info</button>
                   <br/>
-                  <button onClick={() => {deleteArtist}}>Remove employee</button>
+                  <button onClick={() => {deleteArtist(artist)}}>Remove employee</button>
                 </ul>
               </div>
             )

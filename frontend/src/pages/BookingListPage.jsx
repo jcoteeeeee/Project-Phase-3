@@ -1,5 +1,4 @@
 import { React, useEffect, useState, } from "react";
-import { Link } from "react-router-dom";
 
 const BookingListPage = () => {
 
@@ -12,7 +11,13 @@ const BookingListPage = () => {
       setApts(res)
     }
     getApts()
-  }, [])
+  }, [apts])
+
+  const deleteApt = async (appointment) => {
+    let req = await fetch(`http://localhost:3000/appointments/${appointment.id}`, {
+      method: 'DELETE'
+    })
+  }
 
   return (
     <div>
@@ -21,7 +26,14 @@ const BookingListPage = () => {
         {
           apts.map((apt) => {
             return(
-              <div>Time: {apt.apt_datetime} Client: {apt.client_id} Artist:{apt.artist_id} </div>
+              <div>
+                <ul>
+                  <li>Time: {apt.apt_datetime} Client: {apt.client_id} Artist:{apt.artist_id}</li>
+                  <button onClick={() => {}}>Change appointment info</button>
+                  <br/>
+                  <button onClick={() => {deleteApt(apt)}}>Cancel appointment</button> 
+                </ul>  
+              </div>
             )
           })
         }
