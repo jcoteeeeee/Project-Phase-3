@@ -19,8 +19,17 @@ const BookingListPage = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    let req = await fetch(`http://localhost:3000/appointments/${appointment.id}`, {
+      method: 'PATCH', 
+      headers: {'Content-Type': 'application-json'}, 
+      body: JSON.stringify({
+        aptdatetime: e.target.aptdatetime.value,
+        artist: e.target.artist.value,
+        client: e.target.client.value 
+      })
+    })
   }
 
   return (
@@ -32,19 +41,23 @@ const BookingListPage = () => {
             return(
               <div>
                 <ul>
-                  <li>Time: {apt.apt_datetime} Client: {apt.client_id} Artist:{apt.artist_id}</li>
-                  <button onClick={() => {}}>Change appointment info</button>
-                  <br/>
-                  <button onClick={() => {deleteApt(apt)}}>Cancel appointment</button> 
+                  <li>Time: {apt.apt_datetime} Artist: {apt.artist_id} Client:{apt.client_id}</li>
                 </ul>
-                <form>
-                  <label/>
-                  <input/>
-                  <label/>
-                  <input/>
-                  <label/>
-                  <input/>
+                <p>Change appointment:</p>
+                <form onSubmit={handleSubmit}>
+                  <label>Date and time: </label>
+                  <input type="text" name="aptdatetime"/>
+                  <br/>
+                  <label>Artist:</label>
+                  <input type="text" name="artist"/>
+                  <br/>
+                  <label>Client:</label>
+                  <input type="text" name="client"/>
+                  <br/>
+                  <button type="submit">Submit</button>
                 </form>
+                <br/>
+                <button onClick={() => { deleteApt(apt) }}>Cancel appointment</button> 
               </div>
             )
           })

@@ -32,6 +32,7 @@ const StaffPage = () => {
   //patch request 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log('submitted')
     let req = await fetch(`http://localhost:3000/artists/${artist.id}`, {
       method: "PATCH",
       headers: { 'Content-Type': 'application/json' },
@@ -61,9 +62,9 @@ const StaffPage = () => {
                   <br/>
                   <button onClick={() => {deleteArtist(artist)}}>Remove employee</button>
                 </ul>
-                <h3>Update Artist's information</h3>
+                <h3>Update Artist's information: </h3>
                 <form onSubmit={handleSubmit}>
-                    <label />First Name: <label />
+                    <label/>First Name: <label/>
                     <input type="text" name="firstname" />
                     <br/>
                     <label>Last Name: </label>
