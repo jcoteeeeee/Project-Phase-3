@@ -6,7 +6,6 @@ const SchedulerPage = () => {
   return (
     <div>
       <AptCalendar />
-      <button>Click to Schedule?</button>
     </div>
   )
 
