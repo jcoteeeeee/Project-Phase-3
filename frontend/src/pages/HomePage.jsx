@@ -28,15 +28,16 @@ function Box({ children, ...props }) {
   return <div {...props}>{children}</div>
 }
 
-const notify = () => toast('All Full');
+const notify = () => toast("you can't sit here");
 
-    return(
-        <div>
-            <Header/>
-            <Box
+return(
+    <div>
+        <Header/>
+         <div className="hompageBoxes">
+            <Box className="Box1"
             style={{
-                backgroundColor: '#4287f5',
-                borderRadius: 4,
+                backgroundColor: '#99b6df',
+                borderRadius: 10,
                 color: '#eee',
                 minHeight: 200,
                 padding: 12,
@@ -44,11 +45,11 @@ const notify = () => toast('All Full');
                 }}>
                 <form>
                     <div className="input-group">
-                        <label htmlFor="name">Studio Name</label>
+                        <label htmlFor="name">Studio Name </label>
                             <input type="text" id="name" />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="email">Password</label>
+                        <label htmlFor="email">Password </label>
                          <input type="email" id="email" />
                     </div>
                     <button type="submit" className="submit-btn">
@@ -59,8 +60,12 @@ const notify = () => toast('All Full');
                     <button onClick={notify}>Create New Account</button>
                     <Toaster />
                 </div>
-                
             </Box>
+                <img className="Box2" style={{borderRadius: 10}} src="./photos/andrej-lisakov-Ll1TDo_AQyM-unsplash.jpg"/>
+                
+            </div>
+            
+            
         </div>
     )
 }

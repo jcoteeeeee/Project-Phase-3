@@ -14,9 +14,15 @@
       gap: 2em;
 }
 
+h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: normal;
+}
+
 #title {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 25px;
+  font-size: 40px;
+  color: #cf0d0d
 }
 
 #navbar {
@@ -24,3 +30,47 @@
   font-size: 15px;
 }
 
+.input-group {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  color: #fff
+}
+
+.hompageBoxes {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  height: 300px;
+}
+
+/* .box1 {
+  background-color: '#4287f5';
+  border-radius: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 200px;
+  height: 200px
+} */
+
+/* .box2 {
+  background-color: #4287f5;
+  color:#4287f5;
+  border-radius: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 200px;
+  height: 200px;
+  z-index: 10
+} */
+
+.linktext {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Regular', sans-serif;
+  font-size: 25px;
+  color: #fff;
+}
+
+.linktext:hover {
+  color: #00F
+}
