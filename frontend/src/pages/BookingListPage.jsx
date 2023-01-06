@@ -35,7 +35,7 @@ const BookingListPage = () => {
   return (
     <div>
       <h3>This is a list of all the appts</h3>
-      <div>
+      <div className="stafflist">
         {
           apts.map((apt) => {
             return(
