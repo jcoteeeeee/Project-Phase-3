@@ -19,6 +19,10 @@ const BookingListPage = () => {
     })
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <div>
       <h3>This is a list of all the appts</h3>
@@ -32,7 +36,15 @@ const BookingListPage = () => {
                   <button onClick={() => {}}>Change appointment info</button>
                   <br/>
                   <button onClick={() => {deleteApt(apt)}}>Cancel appointment</button> 
-                </ul>  
+                </ul>
+                <form>
+                  <label/>
+                  <input/>
+                  <label/>
+                  <input/>
+                  <label/>
+                  <input/>
+                </form>
               </div>
             )
           })
