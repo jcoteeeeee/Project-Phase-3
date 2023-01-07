@@ -50,7 +50,7 @@ return(
                     </div>
                     <div className="input-group">
                         <label htmlFor="email">Password </label> <br/>
-                         <input type="email" id="email" />
+                         <input type="password" id="email" />
                     </div>
                     <button type="submit" className="submit-btn">
                     <Link style= {{fontColor: '#fff'}} to="studiohomepage">Submit</Link>

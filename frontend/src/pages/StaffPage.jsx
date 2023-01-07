@@ -4,6 +4,10 @@ import { React, useEffect, useState, } from "react";
 const StaffPage = () => {
   const [artists, setArtists] = useState([])
   const [isShown, setIsShown] = useState(true)
+  const [artist, setArtist] = useState([])
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
 
   //get request 
   useEffect(() => {
@@ -14,7 +18,8 @@ const StaffPage = () => {
       setArtists(res)
     }
     getArtists()
-  }, [artists])
+  }, [])
+  //line 17 is so that it updates live 
 
   //delete request 
   const deleteArtist = async (artist) => {
@@ -23,6 +28,7 @@ const StaffPage = () => {
       method: 'DELETE'
     })
   }
+  //use prevState so that it deletes immediately does have to be refreshed to see changes 
 
   //makes UpdateForm show or not 
   // const hideForm = () => {
@@ -33,13 +39,14 @@ const StaffPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('submitted')
-    const updateArtist = async (artist) => {
+    console.log(firstName, lastName, email)
+    const updateArtist = async () => {
       let req = await fetch(`http://localhost:3000/artists/${artist.id}`, {
         method: "PATCH",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          firstname: e.target.firstname.value,
-          lastname: e.target.lastname.value,
+          first_name: e.target.firstname.value,
+          last_name: e.target.lastname.value,
           email: e.target.email.value
         })
       })
@@ -54,7 +61,7 @@ const StaffPage = () => {
         {
           artists.map((artist) => {
             return(
-              <div>
+              <div onMouseOver={() => setArtist(artist)}>
                 <ul>
                   <li>Name: {artist.first_name} {artist.last_name}</li>
                   <li>Email: {artist.email}</li>
@@ -71,10 +78,10 @@ const StaffPage = () => {
                     <input type="text" name="firstname" />
                     <br/>
                     <label>Last Name: </label>
-                    <input type="text" name="lastname" />
+                  <input type="text" name="lastname" />
                     <br/>
                     <label>Email: </label>
-                    <input type="email" name="email" />
+                  <input type="email" name="email" />
                     <button type="submit">Submit</button>
                 </form>
               </div>

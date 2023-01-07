@@ -11,7 +11,7 @@ const BookingListPage = () => {
       setApts(res)
     }
     getApts()
-  }, [apts])
+  }, [])
 
   const deleteApt = async (appointment) => {
     let req = await fetch(`http://localhost:3000/appointments/${appointment.id}`, {
