@@ -8,7 +8,7 @@ const BookingListPage = () => {
   const [clientId, setClientId] = useState("")
   const [aptDateTime, setAptDateTime] = useState("")
 
-
+  //get request 
   useEffect(() => {
     const getApts = async () => {
       let req = await fetch("http://localhost:3000/appointments")
@@ -18,12 +18,14 @@ const BookingListPage = () => {
     getApts()
   }, [])
 
+  //delete request 
   const deleteApt = async (appointment) => {
     let req = await fetch(`http://localhost:3000/appointments/${appointment.id}`, {
       method: 'DELETE'
     })
   }
 
+  //patch request 
   const handleUpdateSubmit = async (e) => {
     e.preventDefault()
     const updateApt = async (appointment) => {
@@ -40,6 +42,7 @@ const BookingListPage = () => {
     updateApt()
   }
 
+  //post request
   const handleScheduleSubmit = (e) => {
     e.preventDefault()
     console.log("Submitted") 

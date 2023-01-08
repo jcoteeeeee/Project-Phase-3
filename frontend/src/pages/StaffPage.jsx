@@ -30,13 +30,8 @@ const StaffPage = () => {
   }
   //use prevState so that it deletes immediately does have to be refreshed to see changes 
 
-  //makes UpdateForm show or not 
-  // const hideForm = () => {
-  //   setIsShown(!isShown)
-  // }
-
   //patch request 
-  const handleSubmit = async (e) => {
+  const handleUpdateSubmit = async (e) => {
     e.preventDefault()
     console.log('submitted')
     console.log(firstName, lastName, email)
@@ -65,15 +60,11 @@ const StaffPage = () => {
                 <ul>
                   <li>Name: {artist.first_name} {artist.last_name}</li>
                   <li>Email: {artist.email}</li>
-                  <div>
-                    {/* <button onClick={handleSubmit(artist)}>Update artist's info</button> */}
-                    {/* {isShown? null : <UpdateForm/>} */} {/* Don't need this boolean now */}
-                  </div>
                   <br/>
                   <button onClick={() => {deleteArtist(artist)}}>Remove employee</button>
                 </ul>
                 <h3>Update Artist's information: </h3>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleUpdateSubmit}>
                     <label/>First Name: <label/>
                     <input type="text" name="firstname" />
                     <br/>
